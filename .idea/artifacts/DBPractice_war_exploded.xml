@@ -1,0 +1,28 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="DBPractice:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/DBPractice_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="DBPractice/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="DBPractice" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Spring MVC-4.3.14.RELEASE" />
+          <element id="library" level="project" name="Spring-4.3.14.RELEASE" />
+          <element id="file-copy" path="$USER_HOME$/Downloads/spring-orm-3.2.4.release.jar" />
+          <element id="file-copy" path="$USER_HOME$/Downloads/mysql-connector-java-5.1.45/mysql-connector-java-5.1.45-bin.jar" />
+          <element id="file-copy" path="$USER_HOME$/Downloads/hibernate-core-3.3.2.GA.jar" />
+          <element id="file-copy" path="$USER_HOME$/Downloads/commons-pool2-2.5.0/commons-pool2-2.5.0.jar" />
+          <element id="file-copy" path="$USER_HOME$/Downloads/commons-dbcp2-2.2.0/commons-dbcp2-2.2.0.jar" />
+          <element id="file-copy" path="$USER_HOME$/Downloads/spring-tx-3.1.1.RELEASE.jar" />
+          <element id="file-copy" path="$USER_HOME$/Downloads/spring-context-3.0.0.release.jar" />
+          <element id="file-copy" path="$USER_HOME$/Downloads/slf4j.jar" />
+          <element id="file-copy" path="$USER_HOME$/Downloads/javax.persistence.jar" />
+          <element id="file-copy" path="$USER_HOME$/Downloads/hibernate-core-4.0.0.Final.jar" />
+          <element id="file-copy" path="$USER_HOME$/Downloads/dom4j-1.6.jar" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
