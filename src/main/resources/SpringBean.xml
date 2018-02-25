@@ -15,7 +15,7 @@
         <!--location="jdbc.properties"/>-->
 
     <context:component-scan
-            base-package="main.java.data"/>
+            base-package="practice5"/>
 
     <bean id="dataSource"
           class="org.apache.commons.dbcp2.BasicDataSource">
@@ -32,14 +32,15 @@
         <constructor-arg ref="dataSource"/>
     </bean>
 
-    <bean id="worker" class="main.java.worker.WorkWithStudents"/>
+    <bean id="worker" class="practice5.worker.WorkWithStudents"/>
 
     <bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
         <property name="dataSource" ref="dataSource" />
-        <property name="packagesToScan" value="main.java.data"/>
+        <!-- package to scan - package where all entities is located -->
+        <property name="packagesToScan" value="practice5"/>
         <property name="hibernateProperties">
             <props>
-                <prop key="dialect">org.hibernate.dialect.MySQLDialect</prop>
+                <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
                 <prop key="hibernate.show_sql">true</prop>
                 <prop key="hibernate.hbm2ddl.auto">update</prop>
             </props>
@@ -48,14 +49,14 @@
 
     <bean class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor"/>
 
-    <bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+    <bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
         <property name="sessionFactory">
             <ref bean="sessionFactory"/>
         </property>
     </bean>
     <tx:annotation-driven transaction-manager="transactionManager"/>
 
-    <bean id="teachersWorker" class="main.java.worker.WorkWithTeacher"/>
+    <bean id="teachersWorker" class="practice5.worker.WorkWithTeacher"/>
 
 
 
